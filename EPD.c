@@ -40,6 +40,10 @@ void bd_draw_bitmap(int x, int y, int width, int height, const uint8_t *bitmap){
             if ((y - originalY) == height){
                 return;
             }
+
+            if (y > BD_FB_HEIGHT){
+                return;
+            }
         }
     }
 }
