@@ -47,3 +47,38 @@ void bd_draw_bitmap(int x, int y, int width, int height, const uint8_t *bitmap){
         }
     }
 }
+
+void bd_draw_text(int x, int y, int size, char *text){
+    const uint8_t *font;
+    const uint8_t *drawChar;
+
+    int runningX = x;
+    int runningY = y;
+
+    int target;
+    
+    switch (size){
+        case 16:
+        default:
+            font = Terminus16;
+    }
+    for (int i = 0; i < strlen(text); i++){
+        
+        if (runningX >= BD_FB_WIDTH){
+
+            runningX = x;
+            runningY += size;
+        }
+
+        if (runningY >= BD_FB_HEIGHT){
+            return;
+        }
+        
+        target = (size*size >> 3) * (text[i] - ' ');
+        drawChar = font + target;
+
+        bd_draw_bitmap(runningX, runningY, size, size, drawChar);
+        runningX += size;
+    }
+
+}

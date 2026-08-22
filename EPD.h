@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <fonts.h>
 
 #define BD_FB_WIDTH 250
 #define BD_FB_HEIGHT 128 //Actual is 122
