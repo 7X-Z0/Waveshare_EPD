@@ -5,6 +5,15 @@ I might as well make it myself
 - [X] Font bitmap added
 - [X] Font bitmap implemented
 - [ ] Font bitmap works
+- [ ] Translate SPI communication from arduino to ESP-IDF 
 
+Arduino functions I need to migrate to ESP-IDF  
+
+- pinMode  
+- digitalWrite  
+- GPIOmode  
+- GPIOconfig  
+
+---
 
 "If there's no compatibility, make it yourself" -Unknown
