@@ -5,10 +5,10 @@
 #include <stdbool.h>
 #include <fonts.h>
 
-#define BD_FB_WIDTH 250
-#define BD_FB_HEIGHT 128 //Actual is 122
+#define EPD_FB_WIDTH 250
+#define EPD_FB_HEIGHT 128 //Actual is 122
 
-#define BD_FB_SIZE (BD_FB_WIDTH * BD_FB_HEIGHT) / 8
+#define EPD_FB_SIZE (EPD_FB_WIDTH * EPD_FB_HEIGHT) / 8
 
 
 
